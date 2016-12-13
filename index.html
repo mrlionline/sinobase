@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>SINObase</title>
+	<link rel="icon" type="img/x-icon" href="images/sino.ico">
+	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="CSS/section.css">
+	<link rel="stylesheet" type="text/css" href="CSS/responsive.css">
+	<script type="text/javascript" src="JS/jquery-3.1.0.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="JS/index.js"></script>
+</head>
+<body>
+
+	<!-- 第一大部分 start-->
+	<div class="header">
+
+		<div id="nav" class="nav">
+			<div class="navWrap">
+				<!-- 顶部导航栏logo部分 -->
+				<div class="logo">
+					<a href="#"><img src="images/logo.png"></a>
+				</div>
+				<div class="logoFix">
+					<a href="#"><img src="images/logo_s.png" alt=""></a>
+				</div><!-- 顶部导航栏logo部分 结束-->
+				
+				<!-- 顶部导航栏收起后的按钮 -->
+				<div class="mini-navBtn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div><!-- 顶部导航栏收起后的按钮 结束-->
+
+				<!-- 顶部导航栏item部分 -->
+				<ul class="navbar">
+					<li><a class="active" href="#">首页</a></li>
+					<li><a href="#">解决方案</a></li>
+					<li><a href="#">客户案例</a></li>
+					<li><a href="#">新闻动态</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li class="navbar_line">
+						
+					</li>
+					<li class="zhiying"><a href="#">智营</a></li>
+					<li class="nav_last">
+						<a href="#"></a>
+						<div class="right_contact">
+							<div class="contact">
+								<p>CONTACT</p>
+								<p>400-6996-518</p>
+							</div>
+							<div class="right_weixin">
+								<div class="right_weixinImg"></div>
+								<img src="images/weixin-erweima.jpg">
+							</div>
+							<div class="right-weibo">
+								<div class="right-weiboImg"></div>
+							</div>
+						</div>
+					</li>
+				</ul><!-- 顶部导航栏item部分 结束-->
+
+			</div>
+		</div>
+
+		<div class="cloud">
+			<ul>
+				<li><img src="images/cloud.png" alt=""></li>
+				<li><img src="images/cloud.png" alt=""></li>
+				<li><img src="images/cloud.png" alt=""></li>
+				<li><img src="images/cloud.png" alt=""></li>
+			</ul>
+		</div>
+
+		<div class="headerBody">
+			<div class="headerBodyText">
+				<p><a href="">现在，你的营销有了一种全新的方式。</a></p>
+				<img src="images/home-img.png">
+			</div>
+			<div class="headerBodyText-phone">
+				<p><a href="">现在，你的营销有了一种全新的方式。</a></p>
+				<img src="images/home-img1.png">
+			</div>
+			<a href="" class="headerKnowMore">了解案例</a>
+		</div>
+
+		<div class="header-arrow">
+			<img src="images/head-arrow.png">
+		</div>
+
+		<!-- 藏到右侧导航 -->
+		<div class="rightSideBar" id="rightSideBar">
+			<a class="rightSideBar-tel" href="">400-6996-518</a>
+			<a href="">解决方案</a>
+			<a href="">客户案例</a>
+			<a href="">新闻动态</a>
+			<a href="">关于我们</a>
+			<a href="">智营</a>
+			<a href="">微信</a>
+			<a href="">微博</a>
+		</div><!-- 藏到右侧导航 结束-->
+	</div>
+	<!-- 第一大部分 end-->
+
+	<!-- 右侧悬浮小工具 start -->
+	<div class="fixTools">
+		<ul>
+			<li class="tools-item toolsDemand">
+				<a href="">问题<br>需求</a>
+				<div class="demandSeize"></div>
+				<div class="demandBody">
+					<h4>您的问题或需求</h4>
+					<a class="demandClose" href="#"></a>
+					<p class="demandBody-text">勾选感兴趣或有需求的服务，也可吐槽下市场中的困惑难点…</p>
+					<div class="demandCheckbox">
+						<div>
+							<input type="checkbox" id="demand01">
+							<label for="demand01">数字会议O2O解决方案</label>
+						</div>
+						<div>
+							<input type="checkbox" id="demand02">
+							<label for="demand02">微信营销解决方案</label>
+						</div>
+						<div>
+							<input type="checkbox" id="demand03">
+							<label for="demand03">SCRM解决方案</label>
+						</div>
+						<div>
+							<input type="checkbox" id="demand04">
+							<label for="demand04">跨渠道营销解决方案</label>
+						</div>
+						<div class="error">请选择</div>
+					</div>
+					<div class="from-group">
+						<textarea class="demandTextarea" placeholder="您的反馈对我们来说很重要 ^_^"></textarea>
+						<div class="error">请填写反馈</div>
+					</div>
+					<div class="from-group">
+						<div class="demandInput demandInput1">
+							<input type="text" placeholder="姓名*">
+							<div class="error">请输入姓名</div>
+						</div>
+						<div class="demandInput demandInput2">
+							<input type="text" placeholder="电话*">
+							<div class="error">请输入手机</div>
+						</div>
+					</div>
+					<div class="from-group">
+						<input class="demandCompany" type="text" placeholder="公司">
+						<div class="error">请输入公司名称</div>
+					</div>
+					<button>提交</button>
+				</div>
+			</li>
+			<li class="tools-item toolsTel">
+				<a href=""></a>
+				<div class="toolsTelSeize"><span></span></div>
+				<div class="telNum">400-6996-518</div>
+			</li>
+			<li id="toolsBackToTop" class="tools-item toolsBackToTop">
+				<a href="javascript:void(0);"></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 右侧悬浮小工具 end -->
+
+	<!-- section-1  start -->
+	<div class="section-1">
+		<div class="s-head">
+			<img src="images/s1_tu.png">
+			<p class="s-head-title">Maximize customer value for clients</p>
+			<p class="s-head-body">场景级解决方案，想你所想。</p>
+			<p class="s-head-footer">可跨渠道、跨终端帮助客户完成营销全过程整合管理<br>全程数据追踪，实现客户洞察提高营销效果</p>
+		</div>
+		<div class="s1-body clearfix">
+			<ul>
+				<li class="s1-body-item1">
+					<div class="s-item-icon s1-item1-icon">
+						<img src="images/kong.png">
+						<img src="images/s1_list_1l.png" class="i-l">
+						<img src="images/s1_list_1r.png" class="i-r">
+						<img src="images/s1_list_1c.png" class="i-c">
+					</div>
+					<div class="s-item-text">
+						<a href="#">数字会议O2O解决方案</a>
+						<p>市场活动对企业的重要性不言而喻，数字会议解决方案通过SMARKET平台，整合线上、线下活动双重需求；不仅能够帮助企业用先进的数字化手段管理线下活动执行流程，实时采集、分析、追踪活动现场的用户数据...... <a href="#">[more]</a></p>
+					</div>
+				</li>
+				<li class="s1-body-item2">
+					<div class="s-item-icon s1-item2-icon">
+						<img src="images/kong.png">
+						<img src="images/s1_list_2c.png" class="i-l">
+						<img src="images/s1_list_2l.png" class="i-r">
+					</div>
+					<div class="s-item-text">
+						<a href="#">微信营销解决方案</a>
+						<p>微信公众平台是企业营销的一个重要的渠道，微信营销解决方案帮助企业实现多账号矩阵式整合管理，更加简便的进行微信运营，建立微信营销活动，同时还提供了多种互动工具和灵活可定制的自助模板......<a href="#">[more]</a></p>
+					</div>
+				</li>
+				<li class="s1-body-item3">
+					<div class="s-item-icon s1-item3-icon">
+						<img src="images/kong.png">
+						<img src="images/s1_list_2c.png" class="i-l">
+						<img src="images/s1_list_3l.png" class="i-r">
+					</div>
+					<div class="s-item-text">
+						<a href="#">SCRM解决方案</a>
+						<p>社交媒体已成为企业接触用户的重要渠道，SCRM解决方案帮助企业建立社交媒体与用户的实时互动，增强用户的行为转化；同时打通社交媒体数据，对用户social标签分类评级，实现多账号、多渠道社交媒体统一数据管理和分析...... <a href="#">[more]</a></p>
+					</div>
+				</li>
+				<li class="s1-body-item4">
+					<div class="s-item-icon s1-item4-icon">
+						<img src="images/kong.png">
+						<img src="images/s1_list_4l.png" class="i-l">
+						<img src="images/s1_list_4r.png" class="i-r">
+						<img src="images/s1_list_2c.png" class="i-l">
+					</div>
+					<div class="s-item-text">
+						<a href="#">全渠道营销解决方案</a>
+						<p>为解决企业营销渠道多样，数据难以采集、管理、挖掘的问题而生。整合线下活动、线上活动、微信、网站、邮件等全营销渠道，形成跨平台，跨终端的统一管理；可以实施各个渠道的营销项目管理......<a href="#">[more]</a></p>
+					</div>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	<!-- section-1  end -->
+
+	<!-- section-2 start -->
+	<div class="section-2">
+		<div class="s-head">
+			<img src="images/s2_tu.png">
+			<p class="s-head-title">SAAS营销领域的先行者，11年行业经验</p>
+			<p class="s-head-body">不同营销场景，同台上演。</p>
+			<p class="s-head-footer">Smarket<sup>®</sup> | 智营平台 是赛诺贝斯自主研发的一站式自动化营销产品。由一个核心数据管理平台及多个渠道管理类产品、多<br>个营销工具共同组成的营销平台，让营销变得更简单、数据更有效。</p>
+		</div>
+
+		<div class="s2-body clearfix">
+			<ul>
+				<li class="s2-body-item1">
+					<dl>
+						<dt>简单</dt>
+						<dd>一键创建营销活动</dd>
+						<dd>可灵活组合的营销组件</dd>
+						<dd>移动端扩展管理</dd>
+					</dl>
+				</li>
+				<li class="s2-body-item2">
+					<dl>
+						<dt>智能</dt>
+						<dd>灵活可配置的业务逻辑</dd>
+						<dd>分析数据实时呈现</dd>
+						<dd>销售线索培育及挖掘</dd>
+					</dl>
+				</li>
+				<li class="s2-body-item3 s2-body-lastItem">
+					<dl>
+						<dt>低成本</dt>
+						<dd>整合管理提升效率</dd>
+						<dd>开放的API接入</dd>
+						<dd>SAAS模式降低运营成本</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+
+		<!-- s2动画部分  start -->
+		<div class="s2-animate">
+			<ul>
+				<li class="c1">
+					<a href="#">线下活动</a>
+				</li>
+				<li class="c2">
+					<a href="#">微信</a>
+				</li>
+				<li class="c3">
+					<a href="#">更多</a>
+				</li>
+				<li class="c4">
+					<a href="#">网站</a>
+				</li>
+				<li class="c5">
+					<a href="#">线上活动</a>
+				</li>
+				<li class="c6">
+					<a href="#">
+						<img src="images/smarket-img.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- s2动画部分  end -->
+
+		<!-- s2替代动画部分  start -->
+		<div class="s2-animate-img">
+			<img src="images/s2-circle.png">
+		</div>
+		<!-- s2替代动画部分  end -->
+	</div>
+	<!-- section-2 end -->
+
+	<!-- section-3 start -->
+	 <div class="section-3">
+	 	<div class="s-head">
+			<img src="images/s3_tu.png">
+			<p class="s-head-title">智营平台 一站式自动化营销管理平台</p>
+			<p class="s-head-body">整合的力量，让你掌握更多。</p>
+			<p class="s-head-footer">SAAS营销领域技术研发能力，12项营销技术软著产品，运营自建IDC。<br>营销市场的驱动者和连接者</p>
+		</div>
+		<button class="s3-btn">即刻试用</button>
+
+		<div class="s3-animate">
+			<a class="s3-learnMore" href=""></a>
+			<img src="images/s4-left.png" class="s3-left">
+			<img src="images/s4-right.png" class="s3-right">
+			<img src="images/s4-bottom.png" class="s3-bottom">
+			<div class="s3-text s3-text-left">
+				<h3>跨渠道整合</h3>
+				<p>Smarket涵盖微信、网站、线下活动、线上活动等常用的营销渠道，并实现多渠道之间的资源复用、身份打通、行为追踪、数据整合等。</p>
+				<ul>
+					<li>联系人数据的跨渠道整合</li>
+					<li>用户行为的跨渠道整合</li>
+					<li>销售线索的跨渠道整合</li>
+				</ul>
+			</div>
+			<div class="s3-text s3-text-right">
+				<h3>营销自动化</h3>
+				<p>Smarket可以进行营销逻辑和客户培育逻辑的配置和管理，支持营销流程和客户培育流程的自动化、智能化执行，让营销变得更简单、行为更及时、数据更有效。</p>
+				<ul>
+					<li>实时触发</li>
+					<li>计划任务</li>
+					<li>条件执行</li>
+				</ul>
+			</div>
+			<div class="s3-text s3-text-bottom">
+				<h3>大数据分析</h3>
+				<p>Smarket拥有从数据抽取、去重、清洗到建模、评级打分、标签管理的一整套体系，最终形成客户画像，实现客户洞察、提高营销效果。</p>
+				<ul>
+					<li>强大而灵活的BI能力</li>
+					<li>客户评级和客户画像</li>
+					<li>客户培育</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s3-animate-img">
+			<img src="images/s3_list_img.png">
+		</div>
+	 </div>
+	<!-- section-3 end -->
+
+	<!-- section-4  start -->
+	<div class="section-4">
+		<div class="s-head">
+			<img src="images/s4_tu.png">
+			<p class="s-head-title">PEOPLE ARE TALKING</p>
+			<p class="s-head-body">精诚所至，金石为开。</p>
+		</div>
+		<div class="s4-list clearfix">
+			<li>
+				<div class="s4-list-item-img">
+					<img src="images/HDS.jpg">
+				</div>
+				<div class="s4-list-item-body">
+					<a href="" class="s4-list-item-title">SCRM整合营销</a>
+					<a href="" class="s4-list-item-title">跨渠道营销管理 整合营销一体化</a>
+					<p>“我们当初建立HDS技术社区的初衷是为了适应互联网的迅速发展，HDS社区从2010年建立以来逐渐从WEB端扩展到移动端APP与WECHAT平台，打通通道、跨平台灵活应用已经使HDS社区成为高端存储技术行业的社区TOP1！5年来应用数字化营销手段整合3大社会化渠道，成功产生销售线索，年均投入产出比超过1:100。 ” </p>
+					<span>——HDS市场部</span>
+				</div>
+				<a href="">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<div class="s4-list-item-img">
+					<img src="images/JGW.jpg">
+				</div>
+				<div class="s4-list-item-body">
+					<a href="" class="s4-list-item-title">云行天下技术应用大会</a>
+					<a href="" class="s4-list-item-title">线下活动的数字化转型</a>
+					<p>“可以说在中国，赛诺贝斯在数字营销领域不仅具有前瞻性的产品理念和成熟的技术实力，更具有一种锐意进取，不断创新，敢于接受挑战的服务精神。这就是为什么我们会选择赛诺贝斯成为金牌合作伙伴。在数字营销领域，我们将共同践行：WIN not by surviving the storm but by Changing the game.”</p>
+					<span>——甲骨文中国市场部</span>
+				</div>
+				<a href="">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<div class="s4-list-item-img">
+					<img src="images/dell.jpg">
+				</div>
+				<div class="s4-list-item-body">
+					<a href="" class="s4-list-item-title">市场活动O2O</a>
+					<a href="" class="s4-list-item-title">数字化活动营销场景 线下线上整合营销</a>
+					<p>“戴尔和赛诺贝斯的合作解决了传统线上线下多活动之间的渠道、资源和数据上整合难，人工成本高的问题。通过赛诺贝斯研发的整合云平台实现了统一管理线上线下多场活动之间的数据，让我们的市场活动从此变得更加简单愉悦！” </p>
+					<span>——戴尔市场部</span>
+				</div>
+				<a href="">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</li>
+		</div>
+
+		<button class="section-bottom-btn">更多案例</button>
+	</div>
+	<!-- section-4  end -->
+
+	<!-- section-5  start -->
+	<div class="section-5">
+		<div class="s-head">
+			<img src="images/s5_tu.png">
+			<p class="s-head-title">HOT OFF THE PRESSES</p>
+			<p class="s-head-body">新闻及资讯</p>
+		</div>
+		<div class="s5-list clearfix">
+			<ul>
+				<li class="s5-list-item1">
+					<h3>赛诺新闻消息<span>2016-10-21</span></h3>
+					<a href=""></a>
+					<h4>中国企业互联网CIO论坛：赛诺贝斯“数字会议解决方案”助攻唤醒IT原力</h4>
+					<p>10月21日，B2B领域生态平台崔牛会联手苏州IT人俱乐部共同发起的“原力●聚变——2016中国企业互联网CIO论坛暨第三届大数据应用峰会”在苏州启航。赛诺贝斯作为支持单位、提供“数字会议解决方案”助力大会完美收官</p>
+				</li>
+				<li class="s5-list-item2">
+					<h3>赛诺行业动态<span>2016-09-19</span></h3>
+					<a href=""></a>
+					<h4>对话孟艳冬：Inbound思维下，数字营销如何推动营销自动化实现企业CRM战略？</h4>
+					<p>赛诺贝斯COO孟艳冬女士在接受九枝兰采访时，就“数字营销是如何推动营销自动化实现企业CRM战略”，做了深刻阐述。并对新型的CRM战略应该注重哪些服务，SCRM究竟能为企业带来哪些实质作用等做了相关解答。</p>
+				</li>
+				<li class="s5-list-item3">
+					<h3>技术研发博客<span>2016-09-19</span></h3>
+					<a href=""></a>
+					<h4>​企业如何把握集客营销命脉？</h4>
+					<p>硅谷风险资本家Guy Kawasaki说过：“如果你手头的钱多于智慧，那么就应专注于推播式营销。如果相反，就应专注于集客营销。”由此可见，集客营销对于促进转化，提升ROI具有重要意义。</p>
+				</li>
+			</ul>
+		</div>
+
+		<button class="section-bottom-btn">阅读更多</button>
+	</div>
+	<!-- section-5  end -->
+	
+	<div class="footer clearfix">
+		<div class="footer-list clearfix">
+			<div class="list-left">
+				<ul>
+					<li>
+						<ul>
+							<li class="list-title"><a href="#">解决方案</a></li>
+							<li><a href="#">数字会议O2O</a></li>
+							<li><a href="#">微信营销</a></li>
+							<li><a href="#">SCRM</a></li>
+							<li><a href="#">跨渠道营销</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="list-title"><a href="#">产品平台</a></li>
+							<li><a href="#">Smarket自动化营销</a></li>
+							<li><a href="#">Ievents数字会议</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="list-title"><a href="#">新闻动态</a></li>
+							<li><a href="#">赛诺资讯</a></li>
+							<li><a href="#">行业动态</a></li>
+							<li><a href="#">技术博客</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="list-title"><a href="#">关于我们</a></li>
+							<li><a href="#">公司介绍</a></li>
+							<li><a href="#">加入我们</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="list-right">
+				<div class="followUs">
+					<h3>关注我们</h3>
+					<img src="images/followus.jpg">
+				</div>
+				<div class="contactUs">
+					<h3>联系我们</h3>
+					<span>400-6996-518</span>
+					<div class="email"><span>marketing@sinobasedm.com</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-logo">
+			<img src="images/foot_logo.png">
+		</div>
+		<div class="footer-line">Copyright © SINObase&nbsp&nbsp&nbsp&nbsp冀ICP备案 12019300号-2</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,771 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "Microsoft Yahei";
+}
+
+body{
+	position: relative;
+}
+
+@keyframes bodyLeftMove{
+	from{left: 0;}
+	to{left: -190px;}
+}
+@keyframes bodyRightMove{
+	from{left: -190px;}
+	to{left: 0;}
+}
+
+.bodyLeftMove{
+	animation: bodyLeftMove 200ms ease-in-out 0s;
+	animation-fill-mode: forwards;
+}
+.bodyRightMove{
+	animation: bodyRightMove 200ms ease-in-out 0s;
+	animation-fill-mode: forwards;
+}
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/s1_bg.jpg) no-repeat;
+	background-size: cover;
+	min-height: 600px;
+	overflow: hidden;
+}
+
+/*漂浮云开始*/
+.cloud{
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	/*background: red;*/
+}
+
+.cloud ul{
+	position: relative;
+	left: -7500px;
+	height: 800px;
+	width: 10000px;
+	/*background: red;*/
+}
+
+.cloud ul li{
+	width: 2500px;
+	height: 100%;
+	float: left;
+}
+
+.cloud ul li img{
+	height: 100%;
+}
+/*漂浮云结束*/
+
+/*导航栏开始*/
+
+.nav{
+	z-index: 5;
+	height: 100px;
+	position: absolute;
+	width: 100%;
+}
+
+#nav .navWrap{
+	margin:0 auto;
+	width: 1387px;
+	height: 100px;
+}
+.navWrapLeftMove{
+	margin-right: 280px;
+}
+
+.nav .logo{
+	display: block;
+	width: 131px;
+	height: 32px;
+	float: left;
+	margin-top: 33px;
+}
+
+.nav .logoFix{
+	display: none;
+}
+
+.nav .logo a img{
+	width: 100%;
+}
+
+/*nav收起后图标 开始*/
+#nav .mini-navBtn{
+	display: none;
+	width: 22px;
+	height: 21px;
+	background: #d4d8de;
+	float: right;
+	margin:16px 10px 0 0;
+	border-radius: 50%;
+	padding-left: 8px;
+	padding-top: 9px;
+	cursor:pointer;
+}
+
+#nav .mini-navBtn span{
+	display: block;
+	width: 14px;
+	height: 3px;
+	background: #000;
+	margin-bottom: 2px;
+}
+/*nav收起后图标 结束*/
+
+
+.nav .navbar{
+	float: right;
+	width: 900px;
+	text-align: right;
+	height: 100%;
+}
+
+
+.nav .navbar li{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.nav .navbar li .active{
+	color:#46afe3;
+}
+
+.nav .navbar li a{
+	font-size: 17px;
+	height: 100px;
+	line-height: 100px;
+	color:#FFF;
+}
+
+.nav .navbar li a:hover{
+	color:#46afe3;
+}
+
+.nav .navbar .navbar_line{
+	display: inline-block;
+	height: 43px;
+	width: 1px;
+	background: #FFF;
+	position: absolute;
+	top: 28px;
+}
+
+.nav .navbar .zhiying{
+	margin-left: 30px;
+}
+
+.nav .navbar .zhiying a{
+	display: inline-block;
+	width: 85px;
+	height: 29px;
+	line-height: 29px;
+	border:1px solid #FFF;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.nav .navbar .nav_last{
+	margin-right: 0;
+}
+
+.nav .navbar .nav_last div{
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.nav .navbar .nav_last a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/head-phone-h.png) no-repeat 0 0;
+	background-size: contain;
+	margin-bottom: -6px;
+}
+
+.nav .navbar .nav_last .right_contact{
+	z-index: 20;
+	background: #FFF;
+	width: 310px;
+	height: 100%;
+	position: fixed;
+	right: -310px;
+	top: 0;
+	padding-top: 100px;
+}
+
+.nav .navbar .nav_last:hover .right_contact{
+	right:0;
+}
+
+.nav .navbar .nav_last .right_contact .contact p{
+	text-align: center;
+	font-size: 20px;
+	color:#b5b5b5;
+	margin-bottom: 7px;
+}
+
+.nav .navbar .nav_last .right_contact .contact p:last-child{
+	font-size: 36px;
+	font-weight: bold;
+	color:#0088cb;
+}
+
+.nav .navbar .nav_last .right_contact .right_weixin{
+	width: 100%;
+	padding:20px 0;
+	background: #efefef;
+	cursor:pointer;
+}
+
+.nav .navbar .nav_last .right_contact .right_weixin:hover,
+.nav .navbar .nav_last .right_contact .right-weibo:hover{
+	background: #0088cb;
+}
+
+.nav .navbar .nav_last .right_contact .right_weixin:hover .right_weixinImg{
+	background: url(../images/weixin-h.png) no-repeat;
+	background-size: 47px 58px;
+}
+
+.nav .navbar .nav_last .right_contact .right_weixin .right_weixinImg{
+	width: 47px;
+	height: 58px;
+	margin:0 auto;
+	background: url(../images/weixin.png) no-repeat;	
+	background-size: 47px 58px;
+}
+
+.nav .navbar .nav_last .right_contact .right_weixin>img{
+	display: block;
+	width: 60%;
+	margin:10px auto 0;
+}
+
+.nav .navbar .nav_last .right_contact .right-weibo{
+	margin-top: 5px;
+	padding:20px 0;
+	width: 100%;
+	cursor:pointer;
+	background: #efefef;
+}
+
+.nav .navbar .nav_last .right_contact .right-weibo .right-weiboImg{
+	width: 47px;
+	height: 58px;
+	margin:0 auto;
+	background: url(../images/weibo.png);
+	background-size: 47px 58px;
+}
+
+.nav .navbar .nav_last .right_contact .right-weibo:hover .right-weiboImg{
+	background: url(../images/weibo-h.png);
+	background-size: 47px 58px;
+}
+
+/*藏到右侧导航栏 开始*/
+.rightSideBar{
+	z-index: 30;
+	width: 280px;
+	height: 100%;
+	float: right;
+	position: fixed;
+	top: 0;
+	right:-280px;
+	background: #FFF;
+}
+
+@keyframes rightSideBar-show{
+	from{
+		right:-280px;
+	}
+	to{
+		right:0;
+	}
+}
+@keyframes rightSideBar-hide{
+	from{
+		right:0;
+	}
+	to{
+		right:-280px;
+	}
+}
+
+.rightSideBar-show{
+	animation: rightSideBar-show 200ms ease-in-out 0s;
+	animation-fill-mode: forwards;
+}
+
+.rightSideBar-hide{
+	animation: rightSideBar-hide 200ms ease-in-out 0s;
+	animation-fill-mode: forwards;
+}
+
+.rightSideBar a{
+	display: block;
+	border-bottom: 1px solid #ddd;
+	color:#b5b5b5;
+	font-size: 14px;
+	font-weight: 400;
+	padding:15px;
+}
+
+.rightSideBar a:hover{
+	color:#0088cb;
+}
+
+.rightSideBar .rightSideBar-tel{
+	color:#0088cb;
+	font-size: 20px;
+	padding:30px 0 15px 30px;
+}
+/*藏到右侧导航栏 结束*/
+
+@keyframes navFix-up{
+	from{
+		top:0;
+	}
+	to{
+		top : -70px;
+	}
+}
+
+@keyframes navFix-down{
+	form{
+		top : -70px;
+	}
+	to{
+		top:0;
+	}
+}
+
+.navFix-up{
+	animation: navFix-up 200ms linear 0s;
+	animation-fill-mode: forwards;
+}
+
+.navFix-down{
+	animation: navFix-down 200ms linear 0s;
+	animation-fill-mode: forwards;
+}
+
+.navFix{
+	z-index: 10;
+	background: #FFF;
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	top: -70px;
+	box-shadow: 0 1px 10px #aaa;
+}
+
+.navFix .navbar{
+	text-align: right;
+	width: 900px;
+	float: right;
+}
+
+.navFix .navbar li a{
+	font-size: 17px;
+	height: 70px;
+	line-height: 70px;
+	color:#000;
+}
+
+.navFix .navbar .zhiying a{
+	border:1px solid #000;
+}
+
+.navFix .navbar .nav_last a{
+	background: url(../images/head-phone.png) no-repeat 0 0;
+	background-size: contain;
+	margin-bottom: -6px;
+}
+
+.navFix .navbar .navbar_line{
+	display: inline-block;
+	height: 43px;
+	width: 1px;
+	background: #000;
+	position: absolute;
+	top: 13px;
+}
+
+.navFix .logo{
+	display: none;
+}
+.navFix .logoFix{
+	display: block;
+	width: 131px;
+	height: 32px;
+	float: left;
+	margin-top: 20px;
+}
+
+.navFix .logoFix a img{
+	width: 100%;
+}
+
+
+/*header中间字体部分 开始*/
+.headerBody{
+	position: absolute;
+	top: 50%;
+	margin-top: -100px;
+	height: 280px;
+	width: 100%;
+
+}
+
+.headerBody .headerBodyText{
+	margin:0 auto;
+	width: 1200px;
+	text-align: center;
+}
+
+.headerBody .headerBodyText p{
+		font-size: 48px;
+		font-weight: 200;
+		margin-bottom: 30px;
+	}
+
+.headerBody .headerBodyText a{
+	font-family: 'webfont';
+	color:#FFF;
+}
+
+.headerBody .headerBodyText img{
+		width: 540px;
+	}
+
+.headerBody .headerBodyText-phone{
+	display: none;
+}
+
+.headerBody .headerKnowMore{
+	display: block;
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	background: #0088cb;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+	color:#FFF;
+	margin:100px auto 0;
+	cursor:pointer;
+}
+
+.headerBody .headerKnowMore:hover{
+	transition: all 0.3s ease-in-out 0s;
+	background:#ee6c78;
+}
+
+/*运动下箭头 start*/
+@keyframes header-arrow{
+	from{
+		transform: translateY(0px);
+	}
+	to{
+		transform: translateY(15px);
+		opacity:0.4;
+		filter:alpha(opacity=40);  
+	}
+}
+.header-arrow{
+	animation: header-arrow 1s linear infinite;
+	width: 40px;
+	margin:100px auto 0;
+	position: absolute;
+	bottom: 45px;
+	left: 50%;
+	margin-left: -20px;
+	cursor:pointer;
+}
+.header-arrow img{
+	width: 100%;
+}
+/*运动下箭头 end*/
+
+/*header中间字体部分 结束*/
+
+/*右侧悬浮小工具 start*/
+.fixTools{
+	z-index: 40;
+	position: fixed;
+	right:0;
+	top:100%;
+	margin-top: -220px;
+	border-top: 1px solid #0088cb;
+}
+
+.fixTools>ul .tools-item{
+	cursor:pointer;
+	/*display:block;*/
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-left: 1px solid #0088cb;
+	border-bottom: 1px solid #0088cb;
+	background: #FFF;
+}
+
+.fixTools>ul .tools-item:hover{
+	background:#0088cb; 
+}
+
+.fixTools>ul .toolsDemand>a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin-top: 7px;
+	font-size: 16px;
+	color:#767e84;
+	text-align: center;
+}
+.fixTools>ul .toolsDemand:hover>a{
+	color:#FFF;
+}
+.fixTools>ul .toolsDemand:hover .demandSeize{
+	display: block;
+}
+.fixTools>ul .toolsDemand:hover .demandBody{
+	display: block;
+}
+
+.fixTools>ul .toolsDemand .demandSeize{
+	width: 15px;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+	background: red;
+	opacity:0;
+	filter:alpha(opacity=0); 
+	display: none;
+}
+
+.fixTools>ul .toolsDemand .demandBody{
+	width: 300px;
+	position: absolute;
+	right: 75px;
+	bottom: 0;
+	background: #FFF;
+	border:1px solid #afbbc5;
+	padding:10px 18px 18px;
+	display: none;
+}
+
+.fixTools>ul .toolsDemand .demandBody h4{
+	font-size: 17px;
+	color:#0d2f48;
+	line-height: 1.8;
+	margin-bottom: 6px;
+}
+
+.fixTools>ul .toolsDemand .demandBody a{
+	background: url(../images/icon_close.gif) no-repeat;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 12px;
+	right: 18px;
+}
+
+.fixTools>ul .toolsDemand .demandBody p{
+	line-height: 1.4;
+	margin-bottom: 10px;
+	color:#767e84;
+}
+
+.fixTools>ul .toolsDemand .demandBody .demandCheckbox input{
+	display: none;
+}
+
+.fixTools>ul .toolsDemand .demandBody .demandCheckbox input[type='checkbox']:checked + label{
+	background: url(../images/check_2.gif) no-repeat 0 7px;
+}
+
+.fixTools>ul .toolsDemand .demandBody .demandCheckbox label{
+	line-height: 28px;
+	padding-left: 22px;
+	display: block;
+	color:#5B5B5B;
+	background: url(../images/check_1.gif) no-repeat 0 7px;
+	cursor:pointer;
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group{
+	margin-bottom: 16px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group .demandTextarea{
+	display: block;
+	resize: none;
+	margin-top: 12px;
+	height: 68px;
+	padding:4px 6px;
+	width: 100%;
+	line-height: 1.4;
+	box-sizing: border-box;
+	font-size: 14px;
+	color:#5B5B5B;
+	font-family: "Microsoft Yahei";
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group .demandInput{
+	width: 50%;
+	float: left;
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group .demandInput input{
+	display: block;
+	padding:4px 6px;
+	line-height: 1.4;
+	box-sizing: border-box;
+	width: 95%;
+	font-size: 14px;
+	color:#5B5B5B;
+	font-family: "Microsoft Yahei";
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group .demandInput2 input{
+	float: right;
+}
+
+.fixTools>ul .toolsDemand .demandBody .from-group .demandCompany{
+	padding:4px 6px;
+	box-sizing: border-box;
+	width: 100%;
+	line-height: 1.4;
+	font-size: 14px;
+	color:#5B5B5B;
+	font-family: "Microsoft Yahei";
+}
+
+.fixTools>ul .toolsDemand .demandBody button{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #0088cb;
+	color:#FFF;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	border:none;
+}
+
+.fixTools>ul .toolsDemand .demandBody .error{
+	display: none;
+	color:red;
+	line-height: 30px;
+}
+
+	/*tel块 start*/
+.fixTools .toolsTel a{
+	display: inline-block;
+	width: 20px;
+	height: 23px;
+	margin-top: 19px;
+	margin-left: 20px;
+	background: url(../images/phone_1.png) no-repeat 0 0;
+}
+.fixTools .toolsTel:hover a{
+	background: url(../images/phone_2.png) no-repeat 0 0;
+}
+
+.fixTools .toolsTel:hover .toolsTelSeize{
+	display: block;
+}
+
+.fixTools .toolsTel:hover .telNum{
+	display: block;
+}
+
+.fixTools .toolsTel .toolsTelSeize{
+	display: none;
+	width: 15px;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	right:100%;
+	background: rgba(0,0,0,0);
+}
+.fixTools .toolsTel .toolsTelSeize span{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border:7px solid transparent;
+	border-left:7px solid #0088cb;
+	margin-top: 25px;
+}
+
+.fixTools .toolsTel .telNum{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 75px;
+	padding:30%;
+	background: #0088cb;
+	white-space: nowrap;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	color:#FFF;
+	border-radius: 4px;
+}
+
+@keyframes toolsBackToTopShow{
+	
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes toolsBackToTopHide{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+		/*display: none;*/
+	}
+}
+
+.toolsBackToTopShow{
+	animation: toolsBackToTopShow 500ms ease 0s;
+	animation-fill-mode: forwards;
+}
+
+.toolsBackToTopHide{
+	animation: toolsBackToTopHide 500ms ease 0s;
+	animation-fill-mode: forwards;
+}
+
+.fixTools .toolsBackToTop{
+	opacity: 0;
+	display: none;
+}
+
+.fixTools .toolsBackToTop a{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background: url(../images/backtotop_1.png) no-repeat center center;
+}
+
+.fixTools .toolsBackToTop:hover a{
+	background: url(../images/backtotop_2.png) no-repeat center center;
+}
+
+	/*tel块 end*/
+
+/*右侧悬浮小工具 end*/

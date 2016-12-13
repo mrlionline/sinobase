@@ -1,0 +1,21 @@
+/*清除默认*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:14px;font-family: "微软雅黑","Heiti SC";color:#5B5B5B;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+/*清除浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+
+/*字体*/
+@font-face {
+	font-family: 'webfont';
+	src: url('../font/b76mmfy2hxluwhfr.eot'); /* IE9 Compat Modes */
+	src: url('../font/b76mmfy2hxluwhfr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	 	 url('../font/b76mmfy2hxluwhfr.woff') format('woff'), /* Modern Browsers */
+		 url('../font/b76mmfy2hxluwhfr.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../font/b76mmfy2hxluwhfr.svg#webfont') format('svg'); /* Legacy iOS */
+   }
