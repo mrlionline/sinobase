@@ -116,7 +116,29 @@
 		left: 0;
 	}
 }
+@-webkit-keyframes s1-item1-l{
+	0%{
+		left:0;
+	}
+	50%{
+		left: -5px;
+	}
+	100%{
+		left: 0;
+	}
+}
 @keyframes s1-item1-r{
+	0%{
+		left:0;
+	}
+	50%{
+		left: 5px;
+	}
+	100%{
+		left: 0;
+	}
+}
+@-webkit-keyframes s1-item1-r{
 	0%{
 		left:0;
 	}
@@ -132,12 +154,47 @@
 /*item2动画*/
 @keyframes s1-item2{
 	0%{
+		-webkit-transform:scale(1,1);
+		-moz-transform:scale(1,1);
+		-ms-transform:scale(1,1);
+		-o-transform:scale(1,1);
 		transform: scale(1,1);
 	}
 	50%{
+		-webkit-transform:scale(1.1,1.1);
+		-moz-transform:scale(1.1,1.1);
+		-ms-transform:scale(1.1,1.1);
+		-o-transform:scale(1.1,1.1);
 		transform: scale(1.1,1.1);
 	}
 	100%{
+		-webkit-transform:scale(1,1);
+		-moz-transform:scale(1,1);
+		-ms-transform:scale(1,1);
+		-o-transform:scale(1,1);
+		transform: scale(1,1);
+	}
+}
+@-webkit-keyframes s1-item2{
+	0%{
+		-webkit-transform:scale(1,1);
+		-moz-transform:scale(1,1);
+		-ms-transform:scale(1,1);
+		-o-transform:scale(1,1);
+		transform: scale(1,1);
+	}
+	50%{
+		-webkit-transform:scale(1.1,1.1);
+		-moz-transform:scale(1.1,1.1);
+		-ms-transform:scale(1.1,1.1);
+		-o-transform:scale(1.1,1.1);
+		transform: scale(1.1,1.1);
+	}
+	100%{
+		-webkit-transform:scale(1,1);
+		-moz-transform:scale(1,1);
+		-ms-transform:scale(1,1);
+		-o-transform:scale(1,1);
 		transform: scale(1,1);
 	}
 }
@@ -145,12 +202,33 @@
 /*item3动画*/
 @keyframes s1-item3{
 	100%{
+		-webkit-transform:rotateX(360deg);
+		-moz-transform:rotateX(360deg);
+		-ms-transform:rotateX(360deg);
+		-o-transform:rotateX(360deg);
+		transform: rotateX(360deg);
+	}
+}
+@-webkit-keyframes s1-item3{
+	100%{
+		-webkit-transform:rotateX(360deg);
+		-moz-transform:rotateX(360deg);
+		-ms-transform:rotateX(360deg);
+		-o-transform:rotateX(360deg);
 		transform: rotateX(360deg);
 	}
 }
 
 /*item4动画*/
 @keyframes s1-item4{
+	0%{
+		left:0;
+	}
+	100%{
+		left:100%;
+	}
+}
+@-webkit-keyframes s1-item4{
 	0%{
 		left:0;
 	}
@@ -331,6 +409,12 @@
 	margin:125px auto 0;
 }
 
+@-webkit-keyframes c1_a{
+	to{
+		left: 347px;
+		top: 232px;
+	}
+}
 @keyframes c1_a{
 	to{
 		left: 347px;
@@ -338,8 +422,11 @@
 	}
 }
 .c1_a{
-	animation: c1_a 3s ease-in 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:c1_a 3s ease-in 0s forwards;
+    -moz-animation:c1_a 3s ease-in 0s forwards;
+    -ms-animation:c1_a 3s ease-in 0s forwards;
+    -o-animation:c1_a 3s ease-in 0s forwards;
+	animation: c1_a 3s ease-in 0s forwards;
 }
 
 @keyframes c2_a{
@@ -348,11 +435,26 @@
 		top: 212px;
 	}
 }
+@-webkit-keyframes c2_a{
+	to{
+		left: 332px;
+		top: 212px;
+	}
+}
 .c2_a{
-	animation: c2_a 3s ease-in 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:c2_a 3s ease-in 0s forwards;
+    -moz-animation:c2_a 3s ease-in 0s forwards;
+    -ms-animation:c2_a 3s ease-in 0s forwards;
+    -o-animation:c2_a 3s ease-in 0s forwards;
+	animation: c2_a 3s ease-in 0s forwards;
 }
 
+@-webkit-keyframes c3_a{
+	to{
+		bottom: 303px;
+		left: 344px;
+	}
+}
 @keyframes c3_a{
 	to{
 		bottom: 303px;
@@ -360,10 +462,19 @@
 	}
 }
 .c3_a{
-	animation: c3_a 3s ease-in 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:c3_a 3s ease-in 0s forwards;
+    -moz-animation:c3_a 3s ease-in 0s forwards;
+    -ms-animation:c3_a 3s ease-in 0s forwards;
+    -o-animation:c3_a 3s ease-in 0s forwards;
+	animation: c3_a 3s ease-in 0s forwards;
 }
 
+@-webkit-keyframes c4_a{
+	to{
+		right: 370px;
+		bottom: 285px;
+	}
+}
 @keyframes c4_a{
 	to{
 		right: 370px;
@@ -371,10 +482,19 @@
 	}
 }
 .c4_a{
-	animation: c4_a 3s ease-in 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:c4_a 3s ease-in 0s forwards;
+    -moz-animation:c4_a 3s ease-in 0s forwards;
+    -ms-animation:c4_a 3s ease-in 0s forwards;
+    -o-animation:c4_a 3s ease-in 0s forwards;
+	animation: c4_a 3s ease-in 0s forwards;
 }
 
+@-webkit-keyframes c5_a{
+	to{
+		top: 250px;
+		right: 410px;
+	}
+}
 @keyframes c5_a{
 	to{
 		top: 250px;
@@ -382,8 +502,11 @@
 	}
 }
 .c5_a{
-	animation: c5_a 3s ease-in 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:c5_a 3s ease-in 0s forwards; 
+    -moz-animation:c5_a 3s ease-in 0s forwards; 
+    -ms-animation:c5_a 3s ease-in 0s forwards; 
+    -o-animation:c5_a 3s ease-in 0s forwards; 
+	animation: c5_a 3s ease-in 0s forwards; 
 }
 /*section-2 动画 end*/
 /*section-2  end*/
@@ -422,6 +545,9 @@
 }
 
 .section-3 .s3-btn:hover{
+	-moz-transition:all 0.3s ease-in-out 0s;
+	-webkit-transition:all 0.3s ease-in-out 0s;
+	-o-transition:all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 	background:#ee6c78;
 }
@@ -460,6 +586,14 @@
 		left: 0;
 	}
 
+	@-webkit-keyframes s3-left-a{
+		to{
+			left: 0;
+			top: 0;
+			filter:alpha(opacity:100);
+			opacity: 1;
+		}
+	}
 	@keyframes s3-left-a{
 		to{
 			left: 0;
@@ -469,7 +603,11 @@
 		}
 	}
 	.s3-left-a{
-		animation: s3-left-a 1.5s linear 0.2s forwards
+		-webkit-animation:s3-left-a 1.5s linear 0.2s forwards;
+	    -moz-animation:s3-left-a 1.5s linear 0.2s forwards;
+	    -ms-animation:s3-left-a 1.5s linear 0.2s forwards;
+	    -o-animation:s3-left-a 1.5s linear 0.2s forwards;
+		animation: s3-left-a 1.5s linear 0.2s forwards;
 	}
 
 	@keyframes s3-right-a{
@@ -480,10 +618,30 @@
 			opacity: 1;
 		}
 	}
+	@-webkit-keyframes s3-right-a{
+		to{
+			right: 0;
+			top: 0;
+			filter:alpha(opacity:100);
+			opacity: 1;
+		}
+	}
 	.s3-right-a{
-		animation: s3-right-a 1.5s linear 0.2s forwards
+		-webkit-animation:s3-right-a 1.5s linear 0.2s forwards;
+	    -moz-animation:s3-right-a 1.5s linear 0.2s forwards;
+	    -ms-animation:s3-right-a 1.5s linear 0.2s forwards;
+	    -o-animation:s3-right-a 1.5s linear 0.2s forwards;
+		animation: s3-right-a 1.5s linear 0.2s forwards;
 	}
 
+	@-webkit-keyframes s3-bottom-a{
+		to{
+			left: 0;
+			bottom: 0;
+			filter:alpha(opacity:100);
+			opacity: 1;
+		}
+	}
 	@keyframes s3-bottom-a{
 		to{
 			left: 0;
@@ -493,7 +651,11 @@
 		}
 	}
 	.s3-bottom-a{
-		animation: s3-bottom-a 1.5s linear 0.2s forwards
+		-webkit-animation:s3-bottom-a 1.5s linear 0.2s forwards;
+	    -moz-animation:s3-bottom-a 1.5s linear 0.2s forwards;
+	    -ms-animation:s3-bottom-a 1.5s linear 0.2s forwards;
+	    -o-animation:s3-bottom-a 1.5s linear 0.2s forwards;
+		animation: s3-bottom-a 1.5s linear 0.2s forwards;
 	}
 
 	@keyframes s3-text-a{
@@ -502,14 +664,32 @@
 			opacity: 1;
 		}
 	}
+	@-webkit-keyframes s3-text-a{
+		to{
+			filter:alpha(opacity:100);
+			opacity: 1;
+		}
+	}
 	.s3-text-left-a{
-		animation: s3-text-a 0.5s linear 2s forwards
+		-webkit-animation:s3-text-a 0.5s linear 2s forwards;
+	    -moz-animation:s3-text-a 0.5s linear 2s forwards;
+	    -ms-animation:s3-text-a 0.5s linear 2s forwards;
+	    -o-animation:s3-text-a 0.5s linear 2s forwards;
+		animation: s3-text-a 0.5s linear 2s forwards;
 	}
 	.s3-text-right-a{
-		animation: s3-text-a 0.5s linear 2.5s forwards
+		-webkit-animation:s3-text-a 0.5s linear 2.5s forwards;
+	    -moz-animation:s3-text-a 0.5s linear 2.5s forwards;
+	    -ms-animation:s3-text-a 0.5s linear 2.5s forwards;
+	    -o-animation:s3-text-a 0.5s linear 2.5s forwards;
+		animation: s3-text-a 0.5s linear 2.5s forwards;
 	}
 	.s3-text-bottom-a{
-		animation: s3-text-a 0.5s linear 3s forwards
+		-webkit-animation:s3-text-a 0.5s linear 3s forwards;
+	    -moz-animation:s3-text-a 0.5s linear 3s forwards;
+	    -ms-animation:s3-text-a 0.5s linear 3s forwards;
+	    -o-animation:s3-text-a 0.5s linear 3s forwards;
+		animation: s3-text-a 0.5s linear 3s forwards;
 	}
 
 	.s3-animate .s3-text{
@@ -687,6 +867,9 @@
 }
 
 .section-bottom-btn:hover{
+	-moz-transition:all 0.3s ease-in-out 0s;
+	-webkit-transition:all 0.3s ease-in-out 0s;
+	-o-transition:all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 	background:#ee6c78;
 }

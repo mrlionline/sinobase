@@ -16,14 +16,28 @@ body{
 	from{left: -190px;}
 	to{left: 0;}
 }
+@-webkit-keyframes bodyLeftMove{
+	from{left: 0;}
+	to{left: -190px;}
+}
+@-webkit-keyframes bodyRightMove{
+	from{left: -190px;}
+	to{left: 0;}
+}
 
 .bodyLeftMove{
-	animation: bodyLeftMove 200ms ease-in-out 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:bodyLeftMove 200ms ease-in-out 0s forwards;
+    -moz-animation:bodyLeftMove 200ms ease-in-out 0s forwards;
+    -ms-animation:bodyLeftMove 200ms ease-in-out 0s forwards;
+    -o-animation:bodyLeftMove 200ms ease-in-out 0s forwards;
+	animation: bodyLeftMove 200ms ease-in-out 0s forwards;
 }
 .bodyRightMove{
-	animation: bodyRightMove 200ms ease-in-out 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:bodyRightMove 200ms ease-in-out 0s forwards;
+    -moz-animation:bodyRightMove 200ms ease-in-out 0s forwards;
+    -ms-animation:bodyRightMove 200ms ease-in-out 0s forwards;
+    -o-animation:bodyRightMove 200ms ease-in-out 0s forwards;
+	animation: bodyRightMove 200ms ease-in-out 0s forwards;
 }
 
 .header{
@@ -177,6 +191,9 @@ body{
 }
 
 .nav .navbar .nav_last div{
+	-moz-transition:all 0.3s ease-in-out 0s;
+	-webkit-transition:all 0.3s ease-in-out 0s;
+	-o-transition:all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 }
 
@@ -281,6 +298,22 @@ body{
 	background: #FFF;
 }
 
+@-webkit-keyframes rightSideBar-show{
+	from{
+		right:-280px;
+	}
+	to{
+		right:0;
+	}
+}
+@-webkit-keyframes rightSideBar-hide{
+	from{
+		right:0;
+	}
+	to{
+		right:-280px;
+	}
+}
 @keyframes rightSideBar-show{
 	from{
 		right:-280px;
@@ -299,13 +332,19 @@ body{
 }
 
 .rightSideBar-show{
-	animation: rightSideBar-show 200ms ease-in-out 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:rightSideBar-show 200ms ease-in-out 0s forwards;
+    -moz-animation:rightSideBar-show 200ms ease-in-out 0s forwards;
+    -ms-animation:rightSideBar-show 200ms ease-in-out 0s forwards;
+    -o-animation:rightSideBar-show 200ms ease-in-out 0s forwards;
+	animation: rightSideBar-show 200ms ease-in-out 0s forwards;
 }
 
 .rightSideBar-hide{
-	animation: rightSideBar-hide 200ms ease-in-out 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:rightSideBar-hide 200ms ease-in-out 0s forwards;
+    -moz-animation:rightSideBar-hide 200ms ease-in-out 0s forwards;
+    -ms-animation:rightSideBar-hide 200ms ease-in-out 0s forwards;
+    -o-animation:rightSideBar-hide 200ms ease-in-out 0s forwards;
+	animation: rightSideBar-hide 200ms ease-in-out 0s forwards;
 }
 
 .rightSideBar a{
@@ -345,15 +384,38 @@ body{
 		top:0;
 	}
 }
+@-webkit-keyframes navFix-up{
+	from{
+		top:0;
+	}
+	to{
+		top : -70px;
+	}
+}
+
+@-webkit-keyframes navFix-down{
+	form{
+		top : -70px;
+	}
+	to{
+		top:0;
+	}
+}
 
 .navFix-up{
-	animation: navFix-up 200ms linear 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:navFix-up 200ms linear 0s forwards;
+    -moz-animation:navFix-up 200ms linear 0s forwards;
+    -ms-animation:navFix-up 200ms linear 0s forwards;
+    -o-animation:navFix-up 200ms linear 0s forwards;
+	animation: navFix-up 200ms linear 0s forwards;
 }
 
 .navFix-down{
-	animation: navFix-down 200ms linear 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:navFix-down 200ms linear 0s forwards;
+    -moz-animation:navFix-down 200ms linear 0s forwards;
+    -ms-animation:navFix-down 200ms linear 0s forwards;
+    -o-animation:navFix-down 200ms linear 0s forwards;
+	animation: navFix-down 200ms linear 0s forwards;
 }
 
 .navFix{
@@ -464,22 +526,55 @@ body{
 }
 
 .headerBody .headerKnowMore:hover{
+	-moz-transition:all 0.3s ease-in-out 0s;
+	-webkit-transition:all 0.3s ease-in-out 0s;
+	-o-transition:all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 	background:#ee6c78;
 }
 
 /*运动下箭头 start*/
-@keyframes header-arrow{
+@-webkit-keyframes header-arrow{
 	from{
+		-webkit-transform:translateY(0px);
+		-moz-transform:translateY(0px);
+		-ms-transform:translateY(0px);
+		-o-transform:translateY(0px);
 		transform: translateY(0px);
 	}
 	to{
+		-webkit-transform:translateY(15px);
+		-moz-transform:translateY(15px);
+		-ms-transform:translateY(15px);
+		-o-transform:translateY(15px);
+		transform: translateY(15px);
+		opacity:0.4;
+		filter:alpha(opacity=40);  
+	}
+}
+@keyframes header-arrow{
+	from{
+		-webkit-transform:translateY(0px);
+		-moz-transform:translateY(0px);
+		-ms-transform:translateY(0px);
+		-o-transform:translateY(0px);
+		transform: translateY(0px);
+	}
+	to{
+		-webkit-transform:translateY(15px);
+		-moz-transform:translateY(15px);
+		-ms-transform:translateY(15px);
+		-o-transform:translateY(15px);
 		transform: translateY(15px);
 		opacity:0.4;
 		filter:alpha(opacity=40);  
 	}
 }
 .header-arrow{
+	-webkit-animation:header-arrow 1s linear infinite;
+    -moz-animation:header-arrow 1s linear infinite;
+    -ms-animation:header-arrow 1s linear infinite;
+    -o-animation:header-arrow 1s linear infinite;
 	animation: header-arrow 1s linear infinite;
 	width: 40px;
 	margin:100px auto 0;
@@ -723,6 +818,22 @@ body{
 	border-radius: 4px;
 }
 
+@-webkit-keyframes toolsBackToTopShow{
+	
+	to{
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes toolsBackToTopHide{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+		/*display: none;*/
+	}
+}
 @keyframes toolsBackToTopShow{
 	
 	to{
@@ -741,13 +852,19 @@ body{
 }
 
 .toolsBackToTopShow{
-	animation: toolsBackToTopShow 500ms ease 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation: toolsBackToTopShow 500ms ease 0s forwards;
+    -moz-animation: toolsBackToTopShow 500ms ease 0s forwards;
+    -ms-animation: toolsBackToTopShow 500ms ease 0s forwards;
+    -o-animation: toolsBackToTopShow 500ms ease 0s forwards;
+	animation: toolsBackToTopShow 500ms ease 0s forwards;
 }
 
 .toolsBackToTopHide{
-	animation: toolsBackToTopHide 500ms ease 0s;
-	animation-fill-mode: forwards;
+	-webkit-animation:toolsBackToTopHide 500ms ease 0s forwards;
+    -moz-animation:toolsBackToTopHide 500ms ease 0s forwards;
+    -ms-animation:toolsBackToTopHide 500ms ease 0s forwards;
+    -o-animation:toolsBackToTopHide 500ms ease 0s forwards;
+	animation: toolsBackToTopHide 500ms ease 0s forwards;
 }
 
 .fixTools .toolsBackToTop{
