@@ -2,9 +2,6 @@ $(function(){
 
 	console.log("jQuery + CSS3 + 媒体查询 编写")
 
-	//连接服务器
-	var socket = io.connect();
-	socket.emit('sinoIn')
 
 	// 判断滚轮滚动方向来控制nav样式
 	var scrollTop = 0;
